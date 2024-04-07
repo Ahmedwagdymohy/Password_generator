@@ -35,4 +35,13 @@ def generatePassword( length : int, symbols: bool,  uppercase: bool):
     combination_length = len (combination)       
     new_password : str= ''
     for _ in range(length):
+        #generates a random value between the range given and then add it to the password
         new_password += combination[secrets.randbelow(combination_length)]
+    return new_password
+
+#
+if __name__ == '__main__':
+    new_pass: str = generatePassword(20,True ,True)
+    print(new_pass)
+
+
